@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>Document</title>
+</head>
+<body class="bg-black">
+    <div class="container mt-lg-5 mt-3 col-lg-5 col-10 p-4" style="box-shadow: 0 0  5px rgb(74, 74, 74) ;">
+    <h3 class="text-center text-light">Aging Calculator</h3>
+    <div class="alert alert-danger text-center fw-bold" style="display: none;" id="emp">space can not be empty</div>
+    <input type="number" placeholder="Write the year you wear born in place" class="form-control shadow-none rounded-0 my-4" id="age">
+    <button class="form-control btn btn-outline-info shadow-none rounded-0" onclick="cal()">Calculate</button>
+    <p id="display" class="text-center my-3"></p>
+      </div>
+    <script>
+        function cal() {
+            var CurrentYear = 2024;
+            var day = 30;
+            var mouth = 12
+            if (age.value == '' ) {
+                emp.style.display = 'block'
+            } else{  
+                var Calculate = Number(CurrentYear) - Number(age.value)
+                display.innerHTML =`<p class="fw-bold text-light">Your Age currently is ${Calculate} year(s) old</p>` 
+                emp.style.display = 'none'
+                age.value = ''
+            }
+        }
+
+    </script>
+</body>
+</html>
